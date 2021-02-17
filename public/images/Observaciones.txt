@@ -1,0 +1,31 @@
+https://github.com/ceenti/api_v1/blob/master/index.js#L1
+
+No estoy seguro de si la configuración de dotenv va aquí o en el archivo donde utilizas las variables
+
+https://github.com/ceenti/api_v1/blob/master/src/server.js#L2
+
+La constante auth no está siendo utilizada, por lo que no debería utilizarse
+
+https://github.com/ceenti/api_v1/blob/master/src/models/admins.js#L15
+
+Sugiero poner aquí la opción de trim, ya que el dato puede contener espacios
+
+https://github.com/ceenti/api_v1/blob/master/src/models/users.js#L15
+
+First_name y last_name también deberían incluir la opción de trim por aquello de los espacios
+
+https://github.com/ceenti/api_v1/blob/master/src/usecases/auth.js
+
+Se podría refactorizar este archivo con funciones más generales, ya que admin y user son muy similares en su manejo
+
+https://github.com/ceenti/api_v1/blob/master/src/routes/auth.js#L44
+
+Aquí falta la opción de await, sino no tendría sentido usar un async en la función
+
+https://github.com/ceenti/api_v1/blob/master/src/routes/resources.js#L7
+https://github.com/ceenti/api_v1/blob/master/src/routes/resources.js#L35
+https://github.com/ceenti/api_v1/blob/master/src/routes/resources.js#L44
+https://github.com/ceenti/api_v1/blob/master/src/routes/admins.js
+https://github.com/ceenti/api_v1/blob/master/src/routes/users.js
+
+Deberías de utilizar el AuthMiddleware ya que en las demás opciones lo estás utilizando ya que sería una brecha de seguridad
