@@ -1,11 +1,9 @@
-import React, {useState} from 'react'
-import Login from './../src/Components/Login/index'
+import React, {useState} from "react";
+import Nav from './Components/Nav/index'
 
+import './App.css'
 export default function App(){
-    return(
-        <div className="container">
-        <Login />
-        </div>
-    )
-} 
-
+ return(
+     <Nav />
+ )   
+}
