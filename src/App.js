@@ -1,9 +1,11 @@
 import React, {useState} from "react";
-import Nav from './Components/Nav/index'
+import Login from './Components/Login/index'
 
-import './App.css'
 export default function App(){
  return(
-     <Nav />
+     <div className="container">
+        <Login />
+     </div>
+
  )   
 }

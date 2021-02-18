@@ -1,6 +1,6 @@
 //import React, {useState} from 'react'
 import React from "react";
-import Login from './../Login/index'
+//import Login from './../Login/index'
 import {
   BrowserRouter as Router,
   Switch,
@@ -10,8 +10,6 @@ import {
   useParams,
   useState
 } from "react-router-dom";
-
-import './style.css'
  
 export default function Nav() {
   return (
