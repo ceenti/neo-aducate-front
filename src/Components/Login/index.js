@@ -1,9 +1,10 @@
 import React from 'react';
 import { Button, Form, FormGroup, Label, Input, FormText } from 'reactstrap';
-import NewButton from './../NewButton/index'
-//import './style.css'
+import NewButton from './../NewButton/index';
+//import React, {useState} from 'react';
 
 export default function Login(){
+
   return (
     <div className="Login">
       <div className="my-2" style={{ width: '80px' }}><img src="./assets/images/logo-neo.svg"/></div>
