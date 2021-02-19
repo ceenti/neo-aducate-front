@@ -3,8 +3,7 @@ import {
     Button
 } from 'reactstrap';
 
-
-export default function NewButton(){
+export default function NewButton() {
     return(
         <Button style={{}} className="login-button">Login</Button>
     )

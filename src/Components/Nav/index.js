@@ -1,6 +1,7 @@
 //import React, {useState} from 'react'
 import React from "react";
-//import Login from './../Login/index'
+import Login from './../Login/index'
+import DashboardNav from "../Dashboard/DashboardNav"
 import {
   BrowserRouter as Router,
   Switch,
@@ -25,6 +26,9 @@ export default function Nav() {
           <li>
             <Link to="/topics">Topics</Link>
           </li>
+          <li>
+            <Link to="/dashboard">Dashboard</Link>
+          </li>
         </ul>
 
         <Switch>
@@ -34,7 +38,10 @@ export default function Nav() {
           <Route path="/topics">
             <Topics />
           </Route>
-          <Route path="/">
+          <Route exact path="/dashboard">
+            <DashboardNav />
+          </Route>
+          <Route exact path="/">
             <Home />
           </Route>
         </Switch>
