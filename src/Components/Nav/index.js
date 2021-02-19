@@ -1,7 +1,7 @@
 //import React, {useState} from 'react'
 import React from "react";
 import Login from './../Login/index'
-import Dashboard from "../Dashboard/Dashboard"
+import DashboardNav from "../Dashboard/DashboardNav"
 import {
   BrowserRouter as Router,
   Switch,
@@ -41,9 +41,9 @@ export default function Nav() {
             <Topics />
           </Route>
           <Route exact path="/dashboard">
-            <Dashboard />
+            <DashboardNav />
           </Route>
-          <Route path="/">
+          <Route exact path="/">
             <Home />
           </Route>
         </Switch>

@@ -1,15 +1,19 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-function School() {
+function School(props) {
+  const { school: { id, name, address }, pos } = props;
+
   return (
     <tr>
-      <td><Link to="/dashboard/schools/1">1</Link></td>
-      <td>Nombre</td>
-      <td>Description</td>
-      <td>Deshabilitar/Habilitar</td>
-      <td>Info</td>
-      <td>Mas</td>
+      <td><Link to={`/dashboard/schools/${id}`}>{pos}</Link></td>
+      <td>{name}</td>
+      <td>{address}</td>
+      <td>
+        <Link to={`/dashboard/schools/${id}`} >
+          Ver Detalles
+        </Link>
+      </td>
     </tr>
   )
 }

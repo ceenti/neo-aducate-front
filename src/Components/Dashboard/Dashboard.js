@@ -1,12 +1,11 @@
 import React from "react";
 import { Container, Row, Col } from "reactstrap";
-import DashboardNav from "./DashboardNav"
 
 function Dashboard() {
   return (
-    <Container>
-      <DashboardNav />
-    </Container>
+    <div className="school-dashboard">
+      <h2>Bienvenido al Dashboard</h2>
+    </div>
   );
 }
 

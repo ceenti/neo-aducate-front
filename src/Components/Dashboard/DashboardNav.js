@@ -8,74 +8,83 @@ import {
 } from "react-router-dom";
 import { Container, Row, Col } from "reactstrap";
 import Sidebar from "./Sidebar";
+import Dashboard from "./Dashboard";
+import Header from "./Header";
 import SchoolsDashboard from "./SchoolsDashboard";
 import SchoolDetails from "./SchoolDetails";
+import SchoolForm from "./SchoolForm";
 
-const routes = [
+const schools = [
   {
-    path: "/dashboard/schools",
-    exact: true,
-    sidebar: () => <div>HHHH</div>
+    id: 1,
+    name: "CECyT 9",
+    address: "Mar Mediterraneo #227",
+    phone: "5557655765",
+    tier: "Tier 1"
   },
   {
-    path: "/dashboard/schools/:id",
-    sidebar: () => <div>FFFF</div>
+    id: 2,
+    name: "Prepa 6",
+    address: "Corina #3",
+    phone: "5557655765",
+    tier: "Tier 2"
+  },
+  {
+    id: 3,
+    name: "Nopalep",
+    address: "San Juan del Queue #123",
+    phone: "5557655765",
+    tier: "Tier 3"
   }
-];
+]
 
 function SingleSchool() {
   const { id } = useParams();
-  return <SchoolDetails id={id} />;
+  const school = schools.find(sch => sch.id == id);
+
+  return <SchoolDetails school={school} />;
 }
 
 function DashboardNav() {
 
   return (
-    <Router>
-      <Row>
-        <Col md={3}>
-          <ul>
-            <li>
-              <Link to="/dashboard/schools">Escuelas</Link>
-            </li>
-          </ul>
+    <Container className="admin-dashboard">
+      <Router>
+        <Row>
+          <Col md={3} className="p-0">
+            <Sidebar />
+          </Col>
 
-          <Switch>
-            {routes.map((route, index) => (
-              // You can render a <Route> in as many places
-              // as you want in your app. It will render along
-              // with any other <Route>s that also match the URL.
-              // So, a sidebar or breadcrumbs or anything else
-              // that requires you to render multiple things
-              // in multiple places at the same URL is nothing
-              // more than multiple <Route>s.
+          <Col md={9} className="p-0">
+            <Header />
+            <Switch>
               <Route
-                key={index}
-                path={route.path}
-                exact={route.exact}
-                children={<route.sidebar />}
+                exact 
+                path="/dashboard/schools/new">
+                <SchoolForm />
+              </Route>
+              <Route
+                exact 
+                path="/dashboard/schools/:id">
+                <SingleSchool />
+              </Route>
+
+              <Route
+                exact
+                path="/dashboard/schools"
+                component={SchoolsDashboard}
               />
-            ))}
-          </Switch>
-        </Col>
 
-        <Col md={9}>
-          <Switch>
-            <Route
-              exact 
-              path="/dashboard/schools/:id">
-              <SingleSchool />
-            </Route>
-
-            <Route
-              exact
-              path="/dashboard/schools"
-              component={SchoolsDashboard}
-            />
-          </Switch>
-        </Col>
-      </Row>
-    </Router>
+              <Route
+                exact
+                path="/dashboard">
+                <Dashboard />
+              </Route>
+            </Switch>
+          </Col>
+        </Row>
+      </Router>
+    </Container>
   );
 }
 
