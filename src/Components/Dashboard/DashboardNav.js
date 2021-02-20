@@ -38,6 +38,11 @@ const schools = [
   }
 ]
 
+function getUrl(){
+const queryString = window.location.search
+console.log(queryString)
+}
+getUrl();
 function SingleSchool() {
   const { id } = useParams();
   const school = schools.find(sch => sch.id == id);
@@ -48,7 +53,7 @@ function SingleSchool() {
 function DashboardNav() {
 
   return (
-    <Container className="admin-dashboard">
+    <Container className="admin-dashboard container-fluid rounded border">
       <Router>
         <Row>
           <Col md={3} className="p-0">
@@ -78,6 +83,7 @@ function DashboardNav() {
               <Route
                 exact
                 path="/dashboard">
+                
                 <Dashboard />
               </Route>
             </Switch>

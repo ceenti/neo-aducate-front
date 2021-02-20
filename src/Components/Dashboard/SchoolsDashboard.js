@@ -16,7 +16,7 @@ const schools = [
   },
   {
     id: 3,
-    name: "Nopalep",
+    name: "Conalep",
     address: "San Juan del Queue #123"
   }
 ]

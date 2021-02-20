@@ -1,18 +1,21 @@
+@import './variables.scss';
 body {
-  background-color: #e4edfb !important;
+  //background-color: $pinky !important;
+  font-family: $main-font;
 }
 
 .admin-dashboard {
-  border-radius: 5px;
+  border-radius: 4px;
   background: #f6fafd;
   border-bottom-right-radius: 10px;
   margin: 20px;
 }
 
 .sidebar {
-  border-radius: 10px 0px 0px 10px;
-  background: #0d2158;
+  border-radius: 4px 0px 0px 4px;
+  background: $navy ;
   height: 100%;
+  //border-radius: 4px;
   
   ul {
     list-style: none;
@@ -26,7 +29,7 @@ body {
       padding: 10px;
 
       &:hover {
-        background: #063877;
+        background: $neo-orange;
         border-radius: 5px;
       }
 
@@ -43,7 +46,7 @@ body {
         color: #ebf2f9;
         line-height: 24px;
         height: 24px;
-        display: block
+        display: block;
 
         &:hover {
           text-decoration: none;
