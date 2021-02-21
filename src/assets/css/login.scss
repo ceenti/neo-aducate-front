@@ -1,0 +1,39 @@
+.Login{
+    *{
+        font-family: $main-font;
+    }
+    .right-aside {
+        width: 100%;
+        img{
+            width: 100%;
+        }
+      }
+      .login-form {
+         h1{
+             text-align: center;
+             color: $sky;
+             font-weight: bold;
+         }
+        
+        .login-button {
+            background-color: $pink;
+            border: $pink;
+            width: 100%;
+            &:hover{
+                background-color: $navy;
+                border: $navy;
+            }
+            &:active{
+                 background-color: $navy;
+                 border: $navy;            
+            }
+            &:focus{
+                background-color: $navy;
+                border: $navy;            
+            }
+        }
+      }
+    
+}
+
+

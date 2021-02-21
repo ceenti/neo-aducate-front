@@ -1,9 +1,18 @@
 import React, {useState} from "react";
-import Nav from './Components/Nav/index'
+import Login from './Components/Login/index'
+import DashboardNav from './Components/Dashboard/DashboardNav';
 
-import './App.css'
 export default function App(){
+    let token = localStorage.getItem('Token')
  return(
-     <Nav />
+
+     <div className="container-fluid mt-3">
+         {
+              token ? <DashboardNav/>  : <Login />
+              
+         }
+
+     </div>
+
  )   
 }

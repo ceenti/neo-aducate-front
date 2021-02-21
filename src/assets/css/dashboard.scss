@@ -1,18 +1,20 @@
+@import './variables.scss';
 body {
-  background-color: #e4edfb !important;
+  font-family: $main-font;
 }
 
 .admin-dashboard {
-  border-radius: 5px;
+  border-radius: 4px;
   background: #f6fafd;
   border-bottom-right-radius: 10px;
-  margin: 20px;
+  margin: 0;
 }
 
 .sidebar {
-  border-radius: 10px 0px 0px 10px;
-  background: #0d2158;
+  border-radius: 4px 0px 0px 4px;
+  background: #ffffff ;
   height: 100%;
+  //border-radius: 4px;
   
   ul {
     list-style: none;
@@ -22,12 +24,22 @@ body {
     
     li {
       display: block;
-      margin: 10px;
+      margin: 12px;
       padding: 10px;
 
       &:hover {
-        background: #063877;
+        background: $pink;
         border-radius: 5px;
+        color:#ffffff;
+        fill:#ffffff;
+        a {
+          color: #ffffff;
+        }
+        svg{
+          path{
+            fill: #ffffff;
+          }
+        }
       }
 
       svg {
@@ -35,18 +47,23 @@ body {
         width: 24px;
 
         path {
-          fill: #ebf2f9;
+          fill: $gray;
+          margin:2px;
+          &:hover{
+            fill:#ffffff;
+          }
         }
       }
 
       a {
-        color: #ebf2f9;
+        color: $gray;
         line-height: 24px;
         height: 24px;
-        display: block
+        display: block;
 
         &:hover {
           text-decoration: none;
+          color:#ffffff;
         }
       }
     }
@@ -95,6 +112,15 @@ header {
 .school-dashboard {
   margin: 10px;
   padding: 10px;
+
+  .title {
+    color:$logo-color;
+    font-weight: 800;
+    padding:0;
+  }
+  .section-name{
+    color:$neo-orange;
+  }
 }
 
 .school-details {
@@ -113,4 +139,18 @@ header {
     padding: 4px;
     margin-bottom: 10px;
   }
+}
+
+.card-home{
+  a{
+    text-decoration: unset;
+    all: unset;
+  
+  }
+  a:hover{
+    text-decoration: unset;
+    all: unset;
+  }
+  
+
 }

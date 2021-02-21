@@ -6,7 +6,7 @@ function Header() {
     <header>
       <div className="search">
         <SearchIcon/>
-        <input type="text" placeholder="Search" />
+        <input style={{textUnderlineOffset: 'unset'}} type="text" placeholder="Search" />
       </div>
     </header>
   )

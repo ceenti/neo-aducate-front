@@ -16,7 +16,7 @@ const schools = [
   },
   {
     id: 3,
-    name: "Nopalep",
+    name: "Conalep",
     address: "San Juan del Queue #123"
   }
 ]
@@ -24,27 +24,29 @@ const schools = [
 function SchoolsDashboard() {
   return (
     <div className="school-dashboard">
-      <h2>Directorio de escuelas</h2>
-
-      <div>
-        <Link to="/dashboard/schools/new" className="btn btn-secondary">Añadir Escuela</Link>
+  
+      <div className="d-flex justify-content-between mb-3">
+        <h3 className="title" >Directorio de <strong className="section-name">Escuelas</strong></h3>
+        <Link to="/dashboard/schools/new" className="btn btn-outline-primary btn-sm center">Añadir Escuela</Link>
       </div>
 
-      <Table striped>
-        <thead>
-          <tr>
-            <th>#</th>
-            <th>Escuela</th>
-            <th>Dirección</th>
-            <th>Opciones</th>
-          </tr>
-        </thead>
-        <tbody>
-          {schools.map((school, index) => {
-            return <School school={school} pos={index+1} />
-          })}
-        </tbody>
-      </Table>
+      <div style={{overflowX: "auto"}}>
+        <Table hover style={{backgroundColor: "white"}}>
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>Escuela</th>
+              <th>Dirección</th>
+              <th>Opciones</th>
+            </tr>
+          </thead>
+          <tbody>
+            {schools.map((school, index) => {
+              return <School school={school} pos={index+1} />
+            })}
+          </tbody>
+        </Table>
+      </div>
     </div>
   )
 }

@@ -38,6 +38,11 @@ const schools = [
   }
 ]
 
+function getUrl(){
+const queryString = window.location.search
+console.log(queryString)
+}
+
 function SingleSchool() {
   const { id } = useParams();
   const school = schools.find(sch => sch.id == id);
@@ -78,6 +83,7 @@ function DashboardNav() {
               <Route
                 exact
                 path="/dashboard">
+                
                 <Dashboard />
               </Route>
             </Switch>

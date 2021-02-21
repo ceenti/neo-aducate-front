@@ -1,0 +1,153 @@
+body {
+  font-family: "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+.admin-dashboard {
+  border-radius: 4px;
+  background: #f6fafd;
+  border-bottom-right-radius: 10px;
+  margin: 0;
+}
+
+.sidebar {
+  border-radius: 4px 0px 0px 4px;
+  background: #ffffff;
+  height: 100%;
+}
+
+.sidebar ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.sidebar ul li {
+  display: block;
+  margin: 12px;
+  padding: 10px;
+}
+
+.sidebar ul li:hover {
+  background: #F30098;
+  border-radius: 5px;
+  color: #ffffff;
+  fill: #ffffff;
+}
+
+.sidebar ul li:hover a {
+  color: #ffffff;
+}
+
+.sidebar ul li:hover svg path {
+  fill: #ffffff;
+}
+
+.sidebar ul li svg {
+  height: 24px;
+  width: 24px;
+}
+
+.sidebar ul li svg path {
+  fill: #555555;
+  margin: 2px;
+}
+
+.sidebar ul li svg path:hover {
+  fill: #ffffff;
+}
+
+.sidebar ul li a {
+  color: #555555;
+  line-height: 24px;
+  height: 24px;
+  display: block;
+}
+
+.sidebar ul li a:hover {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+header {
+  border-top-right-radius: 10px;
+  background: #ffffff;
+  padding: 10px;
+  border-bottom: 1px solid #f1f6fa;
+}
+
+header .search {
+  display: inline-block;
+  background-color: #f6fafd;
+  border: none;
+  border-radius: 5px;
+  padding: 4px;
+}
+
+header .search input {
+  margin-left: 5px;
+  background: transparent;
+  border: none;
+}
+
+.school-form {
+  padding: 10px;
+  margin: 10px;
+}
+
+.school-form label {
+  display: block;
+}
+
+.school-form input[type="text"] {
+  display: inline-block;
+  background-color: #ffffff;
+  border: 1px solid #f1f6fa;
+  border-radius: 5px;
+  padding: 4px;
+  margin-bottom: 10px;
+}
+
+.school-dashboard {
+  margin: 10px;
+  padding: 10px;
+}
+
+.school-dashboard .title {
+  color: #4FA9DD;
+  font-weight: 800;
+  padding: 0;
+}
+
+.school-dashboard .section-name {
+  color: #FF9E32;
+}
+
+.school-details {
+  margin: 10px;
+  padding: 10px;
+}
+
+.school-details label {
+  display: block;
+}
+
+.school-details div p {
+  display: inline-block;
+  background-color: #ffffff;
+  border: 1px solid #f1f6fa;
+  border-radius: 5px;
+  padding: 4px;
+  margin-bottom: 10px;
+}
+
+.card-home a {
+  text-decoration: unset;
+  all: unset;
+}
+
+.card-home a:hover {
+  text-decoration: unset;
+  all: unset;
+}
+/*# sourceMappingURL=dashboard.css.map */
