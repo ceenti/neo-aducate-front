@@ -4,7 +4,7 @@ import { Alert } from 'reactstrap';
 export default function AlertLogin(props) {
     console.log(props);
     return (
-        <Alert color="danger">
+        <Alert color="info">
             {props.message}
         </Alert>   
     )
