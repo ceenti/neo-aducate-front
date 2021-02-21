@@ -29,7 +29,7 @@ body {
 }
 
 .sidebar ul li:hover {
-  background: #F30098;
+  background: #ff39b0;
   border-radius: 5px;
   color: #ffffff;
   fill: #ffffff;
@@ -97,6 +97,7 @@ header .search input {
 
 .school-form label {
   display: block;
+  font-weight: bold;
 }
 
 .school-form input[type="text"] {
@@ -106,6 +107,31 @@ header .search input {
   border-radius: 5px;
   padding: 4px;
   margin-bottom: 10px;
+}
+
+.school-form .btn-pink {
+  background-color: #ff39b0;
+  border: #ff39b0;
+  width: 50%;
+  color: #ffffff;
+}
+
+.school-form .btn-pink:hover {
+  background-color: #012e84;
+  border: #012e84;
+  color: #ffffff;
+}
+
+.school-form .btn-pink:active {
+  background-color: #012e84;
+  border: #012e84;
+  color: #ffffff;
+}
+
+.school-form .btn-pink:focus {
+  background-color: #012e84;
+  border: #012e84;
+  color: #ffffff;
 }
 
 .school-dashboard {
@@ -120,7 +146,7 @@ header .search input {
 }
 
 .school-dashboard .section-name {
-  color: #FF9E32;
+  color: #ff9e32;
 }
 
 .school-details {

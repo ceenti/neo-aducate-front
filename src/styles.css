@@ -12,29 +12,29 @@
 
 .Login .login-form h1 {
   text-align: center;
-  color: #01AADC;
+  color: #01aadc;
   font-weight: bold;
 }
 
 .Login .login-form .login-button {
-  background-color: #F30098;
-  border: #F30098;
+  background-color: #ff39b0;
+  border: #ff39b0;
   width: 100%;
 }
 
 .Login .login-form .login-button:hover {
-  background-color: #002B87;
-  border: #002B87;
+  background-color: #012e84;
+  border: #012e84;
 }
 
 .Login .login-form .login-button:active {
-  background-color: #002B87;
-  border: #002B87;
+  background-color: #012e84;
+  border: #012e84;
 }
 
 .Login .login-form .login-button:focus {
-  background-color: #002B87;
-  border: #002B87;
+  background-color: #012e84;
+  border: #012e84;
 }
 
 body {
@@ -45,12 +45,12 @@ body {
   border-radius: 4px;
   background: #f6fafd;
   border-bottom-right-radius: 10px;
-  margin: 20px;
+  margin: 0;
 }
 
 .sidebar {
   border-radius: 4px 0px 0px 4px;
-  background: #002B87;
+  background: #ffffff;
   height: 100%;
 }
 
@@ -63,13 +63,23 @@ body {
 
 .sidebar ul li {
   display: block;
-  margin: 10px;
+  margin: 12px;
   padding: 10px;
 }
 
 .sidebar ul li:hover {
-  background: #FF9E32;
+  background: #ff39b0;
   border-radius: 5px;
+  color: #ffffff;
+  fill: #ffffff;
+}
+
+.sidebar ul li:hover a {
+  color: #ffffff;
+}
+
+.sidebar ul li:hover svg path {
+  fill: #ffffff;
 }
 
 .sidebar ul li svg {
@@ -78,11 +88,16 @@ body {
 }
 
 .sidebar ul li svg path {
-  fill: #ebf2f9;
+  fill: #555555;
+  margin: 2px;
+}
+
+.sidebar ul li svg path:hover {
+  fill: #ffffff;
 }
 
 .sidebar ul li a {
-  color: #ebf2f9;
+  color: #555555;
   line-height: 24px;
   height: 24px;
   display: block;
@@ -90,6 +105,7 @@ body {
 
 .sidebar ul li a:hover {
   text-decoration: none;
+  color: #ffffff;
 }
 
 header {
@@ -136,6 +152,16 @@ header .search input {
   padding: 10px;
 }
 
+.school-dashboard .title {
+  color: #4FA9DD;
+  font-weight: 800;
+  padding: 0;
+}
+
+.school-dashboard .section-name {
+  color: #ff9e32;
+}
+
 .school-details {
   margin: 10px;
   padding: 10px;
@@ -152,5 +178,41 @@ header .search input {
   border-radius: 5px;
   padding: 4px;
   margin-bottom: 10px;
+}
+
+.card-home a {
+  text-decoration: unset;
+  all: unset;
+}
+
+.card-home a:hover {
+  text-decoration: unset;
+  all: unset;
+}
+
+.btn-pink {
+  background-color: #ff39b0;
+  border: #ff39b0;
+  width: 50%;
+}
+
+.btn-pink:hover {
+  background-color: #012e84;
+  border: #012e84;
+}
+
+.btn-pink:active {
+  background-color: #012e84;
+  border: #012e84;
+}
+
+.btn-pink:focus {
+  background-color: #012e84;
+  border: #012e84;
+}
+
+@font-face {
+  font-family: 'Open Sans';
+  src: url("./Open_Sans/OpenSans-Regular.ttf") format("truetype");
 }
 /*# sourceMappingURL=styles.css.map */

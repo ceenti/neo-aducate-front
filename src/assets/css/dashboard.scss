@@ -97,6 +97,7 @@ header {
 
   label {
     display: block;
+    font-weight: bold;
   }
 
   input[type="text"] {
@@ -106,6 +107,28 @@ header {
     border-radius: 5px;
     padding: 4px;
     margin-bottom: 10px;
+  }
+  .btn-pink{
+    background-color: $pink;
+    border: $pink;
+    width: 50%;
+    color:#ffffff;
+    &:hover{
+        background-color: $navy;
+        border: $navy;
+        color:#ffffff;
+    }
+    &:active{
+         background-color: $navy;
+         border: $navy;   
+         color:#ffffff;         
+    }
+    &:focus{
+        background-color: $navy;
+        border: $navy;  
+        color:#ffffff;          
+    }
+  
   }
 }
 
