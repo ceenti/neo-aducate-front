@@ -176,4 +176,9 @@ header .search input {
   text-decoration: unset;
   all: unset;
 }
+
+.table a svg {
+  width: 25px;
+  height: 25px;
+}
 /*# sourceMappingURL=dashboard.css.map */
