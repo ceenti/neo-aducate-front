@@ -3,10 +3,12 @@ import { Link } from "react-router-dom";
 import { ReactComponent as HomeIcon } from "../../icons/home.svg"
 import { ReactComponent as SchoolIcon } from "../../icons/school.svg"
 import { ReactComponent as MultimediaIcon } from "../../icons/multimedia.svg"
+import logo from './../../assets/images/logo-neo.svg'
 
 function Sidebar() {
   return (
     <div className="sidebar">
+      <img style={{width:"80px", margin: "10px"}} src={logo} />
       <ul>
         <li>
           <Link to="/dashboard"><HomeIcon/> Home</Link>

@@ -23,7 +23,6 @@ export default function Login(){
   function sendLoginInfo(){
     setloginInfo(userLogin)
     login(userLogin)
-
   }
 
  async function login(userLogin){
@@ -50,8 +49,8 @@ export default function Login(){
   
   function manageError(error){
     seterrorMessage(error)
-   setloginError(true)
-  
+    setloginError(true)
+    document.getElementById("resetForm").reset()
   }
 
   function saveLocalStorage(token){
@@ -72,7 +71,7 @@ export default function Login(){
           <img src={imageLogin} />
         </div>
 
-        <Form className="login-form col-12 col-sm-6 p-2">
+        <Form id="resetForm" autoComplete="off" className="login-form col-12 col-sm-6 p-2">
           <h1>Enroll. Empower. Educate.</h1>
           <FormGroup>
             <Label for="exampleEmail">Email</Label>
