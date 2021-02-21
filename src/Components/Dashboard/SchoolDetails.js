@@ -1,5 +1,4 @@
 import React from "react";
-import { withRouter } from "react-router";
 
 function SchoolDetails(props) {
   const { school: { name, address, phone, tier }} = props;

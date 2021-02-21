@@ -11,8 +11,12 @@ import Sidebar from "./Sidebar";
 import Dashboard from "./Dashboard";
 import Header from "./Header";
 import SchoolsDashboard from "./SchoolsDashboard";
+import MembershipsDashboard from "./MembershipsDashboard";
 import SchoolDetails from "./SchoolDetails";
+import MembershipDetails from "./MembershipDetails";
 import SchoolForm from "./SchoolForm";
+import SchoolEdit from "./SchoolEdit";
+import MembershipEdit from "./MembershipEdit";
 
 const schools = [
   {
@@ -38,6 +42,30 @@ const schools = [
   }
 ]
 
+const memberships = [
+  {
+    id: 1,
+    name: "Tier 1",
+    cost: 20,
+    amount: 50,
+    duration: "6 meses"
+  },
+  {
+    id: 2,
+    name: "Tier 2",
+    cost: 30,
+    amount: 150,
+    duration: "6 meses"
+  },
+  {
+    id: 3,
+    name: "Tier 3",
+    cost: 20,
+    amount: 250,
+    duration: "6 meses"
+  }
+]
+
 function getUrl(){
 const queryString = window.location.search
 console.log(queryString)
@@ -48,6 +76,27 @@ function SingleSchool() {
   const school = schools.find(sch => sch.id == id);
 
   return <SchoolDetails school={school} />;
+}
+
+function EditSchool() {
+  const { id } = useParams();
+  const school = schools.find(sch => sch.id == id);
+
+  return <SchoolEdit school={school} />;
+}
+
+function SingleMembership() {
+  const { id } = useParams();
+  const membership = memberships.find(memb => memb.id == id);
+
+  return <MembershipDetails membership={membership} />;
+}
+
+function EditMembership() {
+  const { id } = useParams();
+  const membership = memberships.find(memb => memb.id == id);
+
+  return <MembershipEdit membership={membership} />;
 }
 
 function DashboardNav() {
@@ -68,16 +117,41 @@ function DashboardNav() {
                 path="/dashboard/schools/new">
                 <SchoolForm />
               </Route>
+
               <Route
-                exact 
+                exact
                 path="/dashboard/schools/:id">
                 <SingleSchool />
               </Route>
 
               <Route
                 exact
+                path="/dashboard/schools/edit/:id">
+                <EditSchool />
+              </Route>
+
+              <Route
+                exact
                 path="/dashboard/schools"
                 component={SchoolsDashboard}
+              />
+
+              <Route
+                exact
+                path="/dashboard/memberships/:id">
+                <SingleMembership />
+              </Route>
+
+              <Route
+                exact
+                path="/dashboard/memberships/edit/:id">
+                <EditMembership />
+              </Route>
+
+              <Route
+                exact
+                path="/dashboard/memberships"
+                component={MembershipsDashboard}
               />
 
               <Route
