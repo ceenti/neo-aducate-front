@@ -12,7 +12,7 @@ export default function DashboardCard(){
   return (
 
     <div className="row justify-content-between">
-        <Link to = "/dashboard/schools" className="card-home col-12 col-sm-4 col-md-3  mb-1 rounded">
+        <Link to = "/dashboard/statistics" className="card-home col-12 col-sm-4 col-md-3  mb-1 rounded">
             <Card >
                 <CardImg className="" src={Stadistics} alt="Card image cap" />
                 <CardBody className= " text-center nowrap">
@@ -21,7 +21,7 @@ export default function DashboardCard(){
             </Card>
         </Link>
 
-        <Link to = "/dashboard/schools" className="card-home col-12 col-sm-4 col-md-3  mb-1 rounded">
+        <Link to = "/dashboard/memberships" className="card-home col-12 col-sm-4 col-md-3  mb-1 rounded">
             <Card >
                 <CardImg className="w-55" src={Membership} alt="Card image cap" />
                 <CardBody className= " text-center nowrap">

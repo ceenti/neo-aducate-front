@@ -4,9 +4,13 @@ import {getMembershipById} from './../../lib/api';
 function MembershipDetails(props) {
   const [membership, setMembership] = useState({});
 
-  console.log(props.tier)
+  useEffect(() => {
+    getMembershipById(props.id,setMembership)
+    console.log(props)
+  }, []);
+ 
 
-  const { _id, max_amount, min_amount, price, duration, title_tier} = props.tier;  
+  const { _id, max_amount, min_amount, price, duration, title_tier} = membership;  
 
   return (
     <div className="school-details">

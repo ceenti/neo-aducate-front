@@ -21,7 +21,7 @@ function Sidebar() {
           <Link to="/dashboard/statistics"><SchoolIcon/> Estadísticas</Link>
         </li>
         <li>
-          <Link to="/dashboard/students"><MultimediaIcon /> Contenido</Link>
+          <Link to="/dashboard/students"><MultimediaIcon /> Estudiantes</Link>
         </li>
         <li>
           <Link to="/dashboard/memberships"><BadgeIcon /> Membresías</Link>

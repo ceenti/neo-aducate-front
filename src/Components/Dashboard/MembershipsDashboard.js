@@ -1,32 +1,17 @@
-import React from "react";
+import React, {useState, useEffect} from "react";
 import { Table } from "reactstrap";
 import Membership from "./Membership";
-
-const memberships = [
-  {
-    id: 1,
-    name: "Tier 1",
-    cost: 20,
-    amount: 50,
-    duration: "6 meses"
-  },
-  {
-    id: 2,
-    name: "Tier 2",
-    cost: 30,
-    amount: 150,
-    duration: "6 meses"
-  },
-  {
-    id: 3,
-    name: "Tier 3",
-    cost: 20,
-    amount: 250,
-    duration: "6 meses"
-  }
-]
+import {getAllMemberships} from './../../lib/api';
 
 function MembershipsDashboard() {
+  const [detail, setDetail] = useState([]);
+  useEffect(() => {
+    getAllMemberships(setDetail)
+  }, []);
+
+  //const {_id, max_amount, min_amount, price, duration, title_tier} = detail
+  console.log(detail)
+
   return (
     <div className="school-dashboard">
       <div className="d-flex justify-content-between mb-3">
@@ -38,17 +23,22 @@ function MembershipsDashboard() {
           <thead>
             <tr>
               <th>#</th>
-              <th>Nombre</th>
-              <th>Costo por estudiante</th>
-              <th>Número (máximo) de estudiantes</th>
+              <th>Membresía</th>
+              <th>Precio</th>
+              <th>Registros Mínimos</th>
+              <th>Registros Máximos</th>
               <th>Periodicidad</th>
               <th></th>
             </tr>
           </thead>
           <tbody>
-            {memberships.map((membership, index) => {
-              return <Membership membership={membership} pos={index+1} />
-            })}
+            {detail.map((membership, index) => (
+                <Membership 
+                membership={membership} 
+                position={index+1} 
+                />
+              )
+            )}
           </tbody>
         </Table>
       </div>

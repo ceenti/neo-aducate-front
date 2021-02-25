@@ -1,3 +1,4 @@
+import { Button } from "reactstrap";
 import React, { useState } from "react";
 
 function SchoolEdit(props) {
@@ -26,7 +27,7 @@ function SchoolEdit(props) {
           <input className="col-6" type="text" id="phone" name="phone" placeholder="(55) 5555-5555" value={schoolDetails['phone']} onChange={changeHandler} />
         </div>
 
-        <input className="btn btn-primary" type="submit" id="submit" name="submit" value="Edit School" />
+        <Button className="btn btn-primary" type="button" id="submit" name="submit" value="Edit School"> Guardar </Button>
       </form>
     </div>
   )

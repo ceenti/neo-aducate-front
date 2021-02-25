@@ -33,7 +33,7 @@ function SchoolDetails(props) {
         <p className="col-6">{phone}</p>
       </div>
       <Button className="btn btn-pink" onClick={displayMembership}>Detalle membresía</Button>
-      {memDetail ? <div className=""><MembershipDetails tier={tier}/></div> : null}
+      {memDetail ? <div className=""><MembershipDetails id={tier._id}/></div> : null}
     </div>
 
   )
