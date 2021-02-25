@@ -1,12 +1,12 @@
 import React, {useState, useEffect} from "react";
 import { Button, Form, FormGroup, Label, Input, FormText } from 'reactstrap';
-import { getAllTiers } from './../../lib/api';
+import { getAllMemberships } from './../../lib/api';
 
 function SchoolForm() {
-  const [allTiers, setAllTiers] = useState([]);
+  const [allMemberships, setAllMemberships] = useState([]);
 
   useEffect(() => {
-    getAllTiers(setAllTiers);
+    getAllMemberships(setAllMemberships);
   }, []);
 
   return (
@@ -47,9 +47,7 @@ function SchoolForm() {
       <FormGroup>
         <Label for="exampleSelect">Tier</Label>
         <Input type="select" name="tier">
-          { allTiers.map( tier => {
-              return <option>{tier.title_tier}</option>
-          })}
+          { allMemberships.map( membership => <option value={membership._id}>{membership.title_tier}</option> )}
         </Input>
       </FormGroup>
      

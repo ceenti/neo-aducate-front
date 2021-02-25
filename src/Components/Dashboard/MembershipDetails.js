@@ -1,20 +1,15 @@
 import React, {useEffect, useState} from "react";
-import {getTierById} from './../../lib/api';
+import {getMembershipById} from './../../lib/api';
 
 function MembershipDetails(props) {
-  const [memberTier, setmember] = useState({});
-  useEffect(() => {
+  const [membership, setMembership] = useState({});
 
-    let tier = getTierById(props.tierId)
-    setmember(tier)
-  }, []);
+  console.log(props.tier)
 
-  //const { membership: { name, cost, amount, duration }} = props;
-  const {max_amount, min_amount, price, duration, title_tier} = memberTier
+  const { _id, max_amount, min_amount, price, duration, title_tier} = props.tier;  
 
   return (
     <div className="school-details">
-      <div>{props.tierId}</div>
       <div>
         <label for="name">Nombre:</label>
         <p className="col-6">{title_tier}</p>
@@ -22,17 +17,17 @@ function MembershipDetails(props) {
 
       <div>
         <label for="address">Costo por alumno:</label>
-        <p className="col-6">{price}</p>
+        <p className="col-6">${price}</p>
       </div>
 
       <div>
         <label for="phone">Número de alumnos:</label>
-        <p className="col-6"><strong>{max_amount}</strong><strong>-{min_amount}</strong></p>
+        <p className="col-6"><strong>{min_amount}</strong> - <strong>{max_amount}</strong></p>
       </div>
 
       <div>
         <label for="membership">Periodicidad:</label>
-        <p className="col-6">{duration}</p>
+        <p className="col-6">{duration} meses</p>
       </div>
     </div>
   )
