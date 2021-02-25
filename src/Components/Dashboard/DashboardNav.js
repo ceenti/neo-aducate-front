@@ -79,9 +79,9 @@ function DashboardNav() {
               </Route>
               <Route
                 exact 
-                path="/dashboard/statistics"
-                component={Stadistics} 
-              />
+                path="/dashboard/statistics">
+                  < Stadistics />
+              </Route>
 
 
               <Route
