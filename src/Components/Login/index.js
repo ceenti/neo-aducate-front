@@ -4,6 +4,7 @@ import NewButton from './NewButton';
 import imageLogin from './../../assets/images/Data_points-cuate.png';
 import logo from './../../assets/images/logo-neo.svg';
 import AlertLogin from './alert';
+import login from './../Login'
 
 
 export default function Login(){
@@ -55,7 +56,7 @@ export default function Login(){
 
   function saveLocalStorage(token){
     localStorage.setItem("Token", token );
-    window.location.replace("http://localhost:3000/dashboard")
+    window.location.replace("http://localhost:3000/")
   }
 
   return (

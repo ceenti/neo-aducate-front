@@ -1,13 +1,22 @@
-import React from "react";
+import React, {useState, useEffect} from "react";
+import {getSchoolById} from './../../lib/api';
+import MembershipDetails from './MembershipDetails';
+
+
 
 function SchoolDetails(props) {
-  const { school: { name, address, phone, tier }} = props;
+  const [school, setschool] = useState({});
+  useEffect(() => {
+    getSchoolById(props.id, setschool)
+  }, []);
+
+  const { _id, school_name, address, phone, user } = school;
 
   return (
-    <div className="school-details">
+    <div className="school-details" data-id={_id} >
       <div>
         <label for="name">Nombre:</label>
-        <p className="col-6">{name}</p>
+        <p className="col-6">{school_name}</p>
       </div>
 
       <div>
@@ -22,9 +31,11 @@ function SchoolDetails(props) {
 
       <div>
         <label for="membership">Membresia:</label>
-        <p className="col-6">{tier}</p>
+        <p className="col-6">{user}</p>
       </div>
+      <MembershipDetails tierId = {user}/>
     </div>
+
   )
 }
 

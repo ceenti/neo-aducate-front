@@ -136,6 +136,7 @@ header .search input {
 
 .school-form label {
   display: block;
+  font-weight: bold;
 }
 
 .school-form input[type="text"] {
@@ -145,6 +146,31 @@ header .search input {
   border-radius: 5px;
   padding: 4px;
   margin-bottom: 10px;
+}
+
+.school-form .btn-pink {
+  background-color: #ff39b0;
+  border: #ff39b0;
+  width: 50%;
+  color: #ffffff;
+}
+
+.school-form .btn-pink:hover {
+  background-color: #012e84;
+  border: #012e84;
+  color: #ffffff;
+}
+
+.school-form .btn-pink:active {
+  background-color: #012e84;
+  border: #012e84;
+  color: #ffffff;
+}
+
+.school-form .btn-pink:focus {
+  background-color: #012e84;
+  border: #012e84;
+  color: #ffffff;
 }
 
 .school-dashboard {
@@ -180,35 +206,32 @@ header .search input {
   margin-bottom: 10px;
 }
 
-.card-home a {
-  text-decoration: unset;
-  all: unset;
+a.card-home {
+  text-align: center;
+  width: 100%;
 }
 
-.card-home a:hover {
-  text-decoration: unset;
-  all: unset;
+a.card-home:hover {
+  text-decoration: none;
 }
 
-.btn-pink {
-  background-color: #ff39b0;
-  border: #ff39b0;
-  width: 50%;
+a.card-home .card {
+  height: 210px;
 }
 
-.btn-pink:hover {
-  background-color: #012e84;
-  border: #012e84;
+a.card-home .card:hover {
+  -webkit-box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+          box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
-.btn-pink:active {
-  background-color: #012e84;
-  border: #012e84;
+a.card-home .card img {
+  margin: auto;
+  width: 130px;
 }
 
-.btn-pink:focus {
-  background-color: #012e84;
-  border: #012e84;
+.table a svg {
+  width: 25px;
+  height: 25px;
 }
 
 @font-face {

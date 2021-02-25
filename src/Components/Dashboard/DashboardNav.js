@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState, useEffect} from "react";
 import {
   BrowserRouter as Router,
   Switch,
@@ -17,30 +17,7 @@ import MembershipDetails from "./MembershipDetails";
 import SchoolForm from "./SchoolForm";
 import SchoolEdit from "./SchoolEdit";
 import MembershipEdit from "./MembershipEdit";
-
-const schools = [
-  {
-    id: 1,
-    name: "CECyT 9",
-    address: "Mar Mediterraneo #227",
-    phone: "5557655765",
-    tier: "Tier 1"
-  },
-  {
-    id: 2,
-    name: "Prepa 6",
-    address: "Corina #3",
-    phone: "5557655765",
-    tier: "Tier 2"
-  },
-  {
-    id: 3,
-    name: "Nopalep",
-    address: "San Juan del Queue #123",
-    phone: "5557655765",
-    tier: "Tier 3"
-  }
-]
+import Stadistics from './Statistics';
 
 const memberships = [
   {
@@ -73,16 +50,12 @@ console.log(queryString)
 
 function SingleSchool() {
   const { id } = useParams();
-  const school = schools.find(sch => sch.id == id);
-
-  return <SchoolDetails school={school} />;
+  return <SchoolDetails id = {id} />;
 }
 
 function EditSchool() {
   const { id } = useParams();
-  const school = schools.find(sch => sch.id == id);
-
-  return <SchoolEdit school={school} />;
+  return <SchoolEdit id = {id} />;
 }
 
 function SingleMembership() {
@@ -132,9 +105,15 @@ function DashboardNav() {
 
               <Route
                 exact
-                path="/dashboard/schools"
-                component={SchoolsDashboard}
+                path="/dashboard/schools">
+                <SchoolsDashboard/>
+              </Route>
+              <Route
+                exact 
+                path="/dashboard/statistics"
+                component={Stadistics} 
               />
+
 
               <Route
                 exact
@@ -156,7 +135,7 @@ function DashboardNav() {
 
               <Route
                 exact
-                path="/dashboard">
+                path="/">
                 
                 <Dashboard />
               </Route>

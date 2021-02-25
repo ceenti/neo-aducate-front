@@ -164,17 +164,26 @@ header {
   }
 }
 
-.card-home{
-  a{
-    text-decoration: unset;
-    all: unset;
-  
+a.card-home{
+  text-align: center;  
+  width: 100%;
+  &:hover {
+    text-decoration: none;
   }
-  a:hover{
-    text-decoration: unset;
-    all: unset;
+  .card{
+    height: 210px;
+    &:hover {
+      box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    }
+    img{
+      margin: auto;
+      width: 130px;
+
   }
+
+} 
 }
+
 
 .table {
   a svg{

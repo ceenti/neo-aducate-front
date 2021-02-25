@@ -1,28 +1,17 @@
-import React from "react";
+import React, {useState, useEffect} from "react";
 import { Table } from 'reactstrap';
 import School from './School';
 import { Link } from "react-router-dom";
 import PaginationContainer from './Pagination';
-
-const schools = [
-  {
-    id: 1,
-    name: "CECyT 9",
-    address: "Mar Mediterraneo #227"
-  },
-  {
-    id: 2,
-    name: "Prepa 6",
-    address: "Corina #3"
-  },
-  {
-    id: 3,
-    name: "Conalep",
-    address: "San Juan del Queue #123"
-  }
-]
+import {getSchools} from './../../lib/api';
 
 function SchoolsDashboard() {
+  const [schoolsCollection, setschoolsCollection] = useState([]);
+
+  useEffect(() => {
+    getSchools(setschoolsCollection)
+   },[]);
+
   return (
       <>
       <div className="school-dashboard">
@@ -43,7 +32,7 @@ function SchoolsDashboard() {
               </tr>
             </thead>
             <tbody>
-              {schools.map((school, index) => {
+              {schoolsCollection.map((school, index) => {
                 return <School school={school} pos={index+1} />
               })}
             </tbody>
