@@ -167,14 +167,27 @@ header .search input {
   margin-bottom: 10px;
 }
 
-.card-home a {
-  text-decoration: unset;
-  all: unset;
+a.card-home {
+  text-align: center;
+  width: 100%;
 }
 
-.card-home a:hover {
-  text-decoration: unset;
-  all: unset;
+a.card-home:hover {
+  text-decoration: none;
+}
+
+a.card-home .card {
+  height: 210px;
+}
+
+a.card-home .card:hover {
+  -webkit-box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+          box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+a.card-home .card img {
+  margin: auto;
+  width: 130px;
 }
 
 .table a svg {

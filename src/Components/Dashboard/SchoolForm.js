@@ -1,8 +1,14 @@
 import React, {useState, useEffect} from "react";
 import { Button, Form, FormGroup, Label, Input, FormText } from 'reactstrap';
-
+import { getAllTiers } from './../../lib/api';
 
 function SchoolForm() {
+  const [allTiers, setAllTiers] = useState([]);
+
+  useEffect(() => {
+    getAllTiers(setAllTiers);
+  }, []);
+
   return (
     <div className="school-form">
       <h2>Nueva Escuela</h2>
@@ -40,15 +46,15 @@ function SchoolForm() {
       </FormGroup>
       <FormGroup>
         <Label for="exampleSelect">Tier</Label>
-        <Input type="select" name="tier" id="exampleSelect">
-          <option>1</option>
-          <option>2</option>
-          <option>3</option>
+        <Input type="select" name="tier">
+          { allTiers.map( tier => {
+              return <option>{tier.title_tier}</option>
+          })}
         </Input>
       </FormGroup>
      
       <Button className="btn-pink">Submit</Button>
-    </Form>  
+      </Form>  
     </div>
   )
 }

@@ -5,18 +5,18 @@ import { ReactComponent as DeleteIcon } from "../../icons/delete.svg";
 import { ReactComponent as PencilIcon } from "../../icons/pencil.svg";
 
 function School(props) {
-  const { school: { id, name, address }, pos } = props;
-
+  const { _id, name, address } = props.school;
+  const { pos } = props
   return (
     <tr>
-      <td><Link to={`/dashboard/schools/${id}`}>{pos}</Link></td>
+      <td><Link to={`/dashboard/schools/${_id}`}>{pos}</Link></td>
       <td>{name}</td>
       <td>{address}</td>
       <td>
-        <Link to={`/dashboard/schools/${id}`} >
+        <Link to={`/dashboard/schools/${_id}`} >
           <ViewIcon />
         </Link>
-        <Link to={`/dashboard/schools/edit/${id}`} >
+        <Link to={`/dashboard/schools/edit/${_id}`} >
           <PencilIcon />
         </Link>
         <Link>

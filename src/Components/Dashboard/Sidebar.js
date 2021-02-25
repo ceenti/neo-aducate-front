@@ -12,10 +12,13 @@ function Sidebar() {
       <img style={{width:"80px", margin: "10px"}} src={logo} />
       <ul>
         <li>
-          <Link to="/dashboard"><HomeIcon/> Home</Link>
+          <Link to="/"><HomeIcon/> Home</Link>
         </li>
         <li>
           <Link to="/dashboard/schools"><SchoolIcon/> Escuelas</Link>
+        </li>
+        <li>
+          <Link to="/dashboard/statistics"><SchoolIcon/> Estadísticas</Link>
         </li>
         <li>
           <Link to="/dashboard/students"><MultimediaIcon /> Contenido</Link>
