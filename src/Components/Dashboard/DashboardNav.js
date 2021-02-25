@@ -19,35 +19,6 @@ import SchoolEdit from "./SchoolEdit";
 import MembershipEdit from "./MembershipEdit";
 import Stadistics from './Statistics';
 
-const memberships = [
-  {
-    id: 1,
-    name: "Tier 1",
-    cost: 20,
-    amount: 50,
-    duration: "6 meses"
-  },
-  {
-    id: 2,
-    name: "Tier 2",
-    cost: 30,
-    amount: 150,
-    duration: "6 meses"
-  },
-  {
-    id: 3,
-    name: "Tier 3",
-    cost: 20,
-    amount: 250,
-    duration: "6 meses"
-  }
-]
-
-function getUrl(){
-const queryString = window.location.search
-console.log(queryString)
-}
-
 function SingleSchool() {
   const { id } = useParams();
   return <SchoolDetails id = {id} />;
@@ -60,16 +31,14 @@ function EditSchool() {
 
 function SingleMembership() {
   const { id } = useParams();
-  const membership = memberships.find(memb => memb.id == id);
 
-  return <MembershipDetails membership={membership} />;
+  return <MembershipDetails id={id} />;
 }
 
 function EditMembership() {
   const { id } = useParams();
-  const membership = memberships.find(memb => memb.id == id);
 
-  return <MembershipEdit membership={membership} />;
+  return <MembershipEdit id={id} />;
 }
 
 function DashboardNav() {
