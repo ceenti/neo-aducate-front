@@ -35,7 +35,8 @@ async function getSchoolById(id, callback){
     .then( json => callback(json.data))
     .catch( error => console.log(error))
 }
-async function getAllTiers(callback){
+
+async function getAllMemberships(callback){
     await fetch('http://localhost:8080/admins/tiers', {
         headers : {
             'Content-Type' : 'application/json',
@@ -48,13 +49,13 @@ async function getAllTiers(callback){
             return response.json()
             .then(error => {throw new Error (error.message)})
         }
-        return response.json
+        return response.json()
     })
     .then( json => callback(json.data))
     .catch( error => console.log(error) )
 }
 
-async function getTierById(id){
+async function getMembershipById(id, callback){
     await fetch(`http://localhost:8080/admins/tiers/${id}`, {
         headers: {
             'Content-Type' : 'application/json',
@@ -67,9 +68,9 @@ async function getTierById(id){
             return response.json()
             .then(error => {throw new Error (error.message)})
         }
-        return response.json
+        return response.json()
     })
-    .then( json => console.log(json.data))
+    .then( json => callback(json.data))
     .catch( error => console.log(error))
 }
 
@@ -77,6 +78,6 @@ async function getTierById(id){
 export {
     getSchools,
     getSchoolById,
-    getTierById,
-    getAllTiers
+    getMembershipById,
+    getAllMemberships
 }

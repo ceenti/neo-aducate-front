@@ -1,16 +1,20 @@
-import React, {useState, useEffect} from "react";
-import {getSchoolById} from './../../lib/api';
+import React, { useState, useEffect } from "react";
+import { getSchoolById } from './../../lib/api';
 import MembershipDetails from './MembershipDetails';
-
-
+import { Button } from 'reactstrap';
 
 function SchoolDetails(props) {
   const [school, setschool] = useState({});
+  const [memDetail, setMemDetail] = useState(false);
   useEffect(() => {
     getSchoolById(props.id, setschool)
   }, []);
 
-  const { _id, school_name, address, phone, user } = school;
+  const { _id, school_name, address, phone, tier } = school;
+
+  function displayMembership(){
+    setMemDetail(!memDetail)
+  }
 
   return (
     <div className="school-details" data-id={_id} >
@@ -28,12 +32,8 @@ function SchoolDetails(props) {
         <label for="phone">Teléfono:</label>
         <p className="col-6">{phone}</p>
       </div>
-
-      <div>
-        <label for="membership">Membresia:</label>
-        <p className="col-6">{user}</p>
-      </div>
-      <MembershipDetails tierId = {user}/>
+      <Button className="btn btn-pink" onClick={displayMembership}>Detalle membresía</Button>
+      {memDetail ? <div className=""><MembershipDetails tier={tier}/></div> : null}
     </div>
 
   )

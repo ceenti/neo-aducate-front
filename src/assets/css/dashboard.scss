@@ -162,6 +162,28 @@ header {
     padding: 4px;
     margin-bottom: 10px;
   }
+  .btn-pink{
+    background-color: $sky;
+    border: $sky;
+    width: 50%;
+    color:#ffffff;
+    &:hover{
+        background-color: $navy;
+        border: $navy;
+        color:#ffffff;
+    }
+    &:active{
+         background-color: $navy;
+         border: $navy;   
+         color:#ffffff;         
+    }
+    &:focus{
+        background-color: $navy;
+        border: $navy;  
+        color:#ffffff;          
+    }
+  
+  }
 }
 
 a.card-home{
