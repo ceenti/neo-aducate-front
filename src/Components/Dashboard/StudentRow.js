@@ -1,7 +1,8 @@
 import React from "react";
 
 function StudentRow(props) {
-  const { name, last_name, birthday, grade } = props.student;
+  const { last_name, birthday, grade } = props.student;
+  const { name } = props.student.user;
   const { index } = props;
 
   return (
@@ -9,7 +10,7 @@ function StudentRow(props) {
       <td>{index}</td>
       <td>{name}</td>
       <td>{last_name}</td>
-      <td>{birthday}</td>
+      <td>{new Date(birthday).toLocaleDateString()}</td>
       <td>{grade}</td>
       <td></td>
     </tr>    
