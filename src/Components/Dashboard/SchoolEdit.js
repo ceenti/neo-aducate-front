@@ -1,12 +1,23 @@
 import { Button } from "reactstrap";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import {updateSchool} from './../../lib/api';
+import {getSchoolById} from './../../lib/api';
 
 function SchoolEdit(props) {
-  const [schoolDetails, setSchoolDetails] = useState(props.school);
+  const [schoolDetails, setSchoolDetails] = useState({});
 
   const changeHandler = event => {
     setSchoolDetails({...schoolDetails, [event.target.name]: event.target.value})
   }
+
+  function onClickHandler(){
+    console.log(schoolDetails)
+    updateSchool(schoolDetails)
+  }
+
+  useEffect(() => {
+    getSchoolById(props.id, setSchoolDetails)
+  }, []);
 
   return (
     <div className="school-form">
@@ -14,7 +25,7 @@ function SchoolEdit(props) {
       <form>
         <div>
           <label for="name">Nombre:</label>
-          <input className="col-6" type="text" id="name" name="name" placeholder="School Name" value={schoolDetails['name']} onChange={changeHandler} />
+          <input className="col-6" type="text" id="school_name" name="school_name" placeholder="School Name" value={schoolDetails['school_name']} onChange={changeHandler} />
         </div>
 
         <div>
@@ -27,7 +38,7 @@ function SchoolEdit(props) {
           <input className="col-6" type="text" id="phone" name="phone" placeholder="(55) 5555-5555" value={schoolDetails['phone']} onChange={changeHandler} />
         </div>
 
-        <Button className="btn btn-primary" type="button" id="submit" name="submit" value="Edit School"> Guardar </Button>
+        <Button className="btn btn-primary" type="button" id="submit" name="submit" value="Edit School" onClick={onClickHandler}> Guardar </Button>
       </form>
     </div>
   )

@@ -206,6 +206,31 @@ header .search input {
   margin-bottom: 10px;
 }
 
+.school-details .btn-pink {
+  background-color: #01aadc;
+  border: #01aadc;
+  width: 50%;
+  color: #ffffff;
+}
+
+.school-details .btn-pink:hover {
+  background-color: #012e84;
+  border: #012e84;
+  color: #ffffff;
+}
+
+.school-details .btn-pink:active {
+  background-color: #012e84;
+  border: #012e84;
+  color: #ffffff;
+}
+
+.school-details .btn-pink:focus {
+  background-color: #012e84;
+  border: #012e84;
+  color: #ffffff;
+}
+
 a.card-home {
   text-align: center;
   width: 100%;
