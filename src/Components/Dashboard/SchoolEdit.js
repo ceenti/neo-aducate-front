@@ -1,5 +1,6 @@
-import { Button, Form, FormGroup, Label, Input, FormText } from 'reactstrap';
 import React, { useState, useEffect } from "react";
+import { Button, Form, FormGroup, Label, Input, FormText } from 'reactstrap';
+import { Link } from "react-router-dom";
 import {updateSchool} from './../../lib/api';
 import {getSchoolById} from './../../lib/api';
 
@@ -11,7 +12,6 @@ function SchoolEdit(props) {
   }
 
   function onClickHandler(){
-    console.log(schoolDetails)
     updateSchool(schoolDetails)
   }
 
@@ -36,7 +36,7 @@ function SchoolEdit(props) {
           <Input type="text" name="phone" placeholder="55-5555-5555" value={schoolDetails['phone']} onChange={changeHandler}/>
         </FormGroup>
         <div className="d-flex justify-content-end">
-        <Button className="btn btn-aqua" type="button"  name="cancel" value="cancelar" onClick={onClickHandler}> Cancelar </Button>
+        <Link className="btn btn-aqua" to="/dashboard/schools">Cancelar </Link>
         <Button className="btn btn-pink" type="button"  name="submit" value="Edit School" onClick={onClickHandler}> Guardar </Button>
         </div>
       </Form>
