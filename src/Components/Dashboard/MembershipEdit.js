@@ -1,5 +1,6 @@
-import { Button, Form, FormGroup, Label, Input, FormText } from 'reactstrap';
 import React, { useState, useEffect } from "react";
+import { Button, Form, FormGroup, Label, Input, FormText } from 'reactstrap';
+import { Link } from "react-router-dom";
 import { getMembershipById } from './../../lib/api';
 import { updateMembership } from './../../lib/api';
 
@@ -46,9 +47,10 @@ function MembershipEdit(props) {
           <Label for="duration">Duración en meses: </Label>
           <Input type="number" name="duration" placeholder="3 meses" value={membership['duration']} onChange={changeHandler}  />
         </FormGroup>
-        <div className="d-flex justify-content-end">
-        <Button className="btn btn-aqua" type="button" onClick = {EditMembershipButton}>Cancelar</Button>
-        <Button className="btn btn-pink" type="button" onClick = {EditMembershipButton}>Editar</Button>
+
+        <div className="text-right">
+          <Link className="btn btn-aqua" to="/dashboard/memberships">Regresar</Link>
+          <Button className="btn btn-pink" type="button" onClick = {EditMembershipButton}>Editar</Button>
         </div>
       </Form>
     </div>
