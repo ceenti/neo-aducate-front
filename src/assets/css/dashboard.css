@@ -135,25 +135,21 @@ header .search input {
   margin: 10px;
 }
 
+.school-form .title-section {
+  text-align: center;
+}
+
 .school-form label {
   display: block;
   font-weight: bold;
-}
-
-.school-form input[type="text"] {
-  display: inline-block;
-  background-color: #ffffff;
-  border: 1px solid #f1f6fa;
-  border-radius: 5px;
-  padding: 4px;
-  margin-bottom: 10px;
+  font-size: 14px;
 }
 
 .school-form .btn-pink {
   background-color: #ff39b0;
   border: #ff39b0;
-  width: 50%;
   color: #ffffff;
+  margin: 5px;
 }
 
 .school-form .btn-pink:hover {
@@ -169,6 +165,31 @@ header .search input {
 }
 
 .school-form .btn-pink:focus {
+  background-color: #012e84;
+  border: #012e84;
+  color: #ffffff;
+}
+
+.school-form .btn-aqua {
+  background-color: #00B7B9;
+  border: #00B7B9;
+  color: #ffffff;
+  margin: 5px;
+}
+
+.school-form .btn-aqua:hover {
+  background-color: #012e84;
+  border: #012e84;
+  color: #ffffff;
+}
+
+.school-form .btn-aqua:active {
+  background-color: #012e84;
+  border: #012e84;
+  color: #ffffff;
+}
+
+.school-form .btn-aqua:focus {
   background-color: #012e84;
   border: #012e84;
   color: #ffffff;
@@ -192,6 +213,7 @@ header .search input {
 .school-details {
   margin: 10px;
   padding: 10px;
+  border: none;
 }
 
 .school-details label {
@@ -232,6 +254,71 @@ header .search input {
   color: #ffffff;
 }
 
+.member-detail {
+  padding: 10px;
+  margin: 10px;
+}
+
+.member-detail .title-section {
+  text-align: center;
+}
+
+.member-detail label {
+  display: block;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.member-detail .btn-pink {
+  background-color: #ff39b0;
+  border: #ff39b0;
+  color: #ffffff;
+  margin: 5px;
+}
+
+.member-detail .btn-pink:hover {
+  background-color: #012e84;
+  border: #012e84;
+  color: #ffffff;
+}
+
+.member-detail .btn-pink:active {
+  background-color: #012e84;
+  border: #012e84;
+  color: #ffffff;
+}
+
+.member-detail .btn-pink:focus {
+  background-color: #012e84;
+  border: #012e84;
+  color: #ffffff;
+}
+
+.member-detail .btn-aqua {
+  background-color: #00B7B9;
+  border: #00B7B9;
+  color: #ffffff;
+  margin: 5px;
+}
+
+.member-detail .btn-aqua:hover {
+  background-color: #012e84;
+  border: #012e84;
+  color: #ffffff;
+}
+
+.member-detail .btn-aqua:active {
+  background-color: #012e84;
+  border: #012e84;
+  color: #ffffff;
+}
+
+.member-detail .btn-aqua:focus {
+  background-color: #012e84;
+  border: #012e84;
+  color: #ffffff;
+}
+
 a.card-home {
   text-align: center;
   width: 100%;
@@ -263,5 +350,30 @@ a.card-home .card img {
 .statistics-dashboard h2 {
   color: #555555;
   font-size: 18px;
+}
+
+.detailedMembership .btn-orange {
+  background-color: #ff9e32;
+  border: #ff9e32;
+  color: #ffffff;
+  margin: 5px;
+}
+
+.detailedMembership .btn-orange:hover {
+  background-color: #012e84;
+  border: #012e84;
+  color: #ffffff;
+}
+
+.detailedMembership .btn-orange:active {
+  background-color: #ff9e32;
+  border: #ff9e32;
+  color: #ffffff;
+}
+
+.detailedMembership .btn-orange:focus {
+  background-color: #012e84;
+  border: #012e84;
+  color: #ffffff;
 }
 /*# sourceMappingURL=dashboard.css.map */

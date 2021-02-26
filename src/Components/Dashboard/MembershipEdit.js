@@ -7,7 +7,9 @@ function MembershipEdit(props) {
   const [membership, setMembership] = useState({});
 
   const changeHandler = event => {
-    setMembership({...membership, [event.target.name]: event.target.value})
+    let name = event.target.name
+    let value = event.target.value
+    setMembership({...membership, [name]: value})
   }
   function EditMembershipButton(){
     updateMembership(membership)
@@ -20,7 +22,7 @@ function MembershipEdit(props) {
   
   console.log(membership)
   return (
-    <div className="school-form">
+    <div className="school-form col-12">
       <h2>Edit Membership</h2>
       <form data-memberid = {membership['id']}>
         <div>
@@ -47,8 +49,9 @@ function MembershipEdit(props) {
           <label for="phone">Duration:</label>
           <input className="col-6" type="number" id="duration" name="duration" placeholder="3 meses" value={membership['duration']} onChange={changeHandler} />
         </div>
-
-        <input className="btn btn-primary" type="button" name="submit" value="Editar Membresía" onClick = {EditMembershipButton}/>
+        <div className="col-6">
+          <input className="btn btn-primary" type="button" name="submit" value="Editar Membresía" onClick = {EditMembershipButton}/>
+        </div>
       </form>
     </div>
   )

@@ -1,3 +1,23 @@
+async function createSchool(data, callback){
+    await fetch('http://localhost:8080/admins/create_user', {
+        headers: {
+            'Content-Type': 'application/json',
+            'Authorization' : localStorage.getItem('Token')            
+        },
+        method: "POST",
+        body: JSON.stringify(data)
+    })
+    .then(response => {
+        if(!response.ok){
+            return response.json()
+            .then(error => {throw new Error(error.message)})
+        }
+        return response.json()
+    })
+    .then( json => callback(json.data))
+    .catch( error => console.log(error))
+}
+
 async function getSchools(callback){
     await fetch("http://localhost:8080/admins/schools", {
         headers: {
@@ -117,6 +137,7 @@ async function updateMembership(data){
 }
 
 export {
+    createSchool,
     getSchools,
     getSchoolById,
     getMembershipById,

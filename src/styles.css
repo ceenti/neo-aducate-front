@@ -174,25 +174,21 @@ header .search input {
   margin: 10px;
 }
 
+.school-form .title-section {
+  text-align: center;
+}
+
 .school-form label {
   display: block;
   font-weight: bold;
-}
-
-.school-form input[type="text"] {
-  display: inline-block;
-  background-color: #ffffff;
-  border: 1px solid #f1f6fa;
-  border-radius: 5px;
-  padding: 4px;
-  margin-bottom: 10px;
+  font-size: 14px;
 }
 
 .school-form .btn-pink {
   background-color: #ff39b0;
   border: #ff39b0;
-  width: 50%;
   color: #ffffff;
+  margin: 5px;
 }
 
 .school-form .btn-pink:hover {
@@ -208,6 +204,56 @@ header .search input {
 }
 
 .school-form .btn-pink:focus {
+  background-color: #012e84;
+  border: #012e84;
+  color: #ffffff;
+}
+
+.school-form .btn-aqua {
+  background-color: #00B7B9;
+  border: #00B7B9;
+  color: #ffffff;
+  margin: 5px;
+}
+
+.school-form .btn-aqua:hover {
+  background-color: #012e84;
+  border: #012e84;
+  color: #ffffff;
+}
+
+.school-form .btn-aqua:active {
+  background-color: #012e84;
+  border: #012e84;
+  color: #ffffff;
+}
+
+.school-form .btn-aqua:focus {
+  background-color: #012e84;
+  border: #012e84;
+  color: #ffffff;
+}
+
+.btn-orange {
+  background-color: #ff9e32;
+  border: #ff9e32;
+  color: #ffffff;
+  margin: 5px;
+}
+
+.btn-orange:hover {
+  background-color: #012e84;
+  border: #012e84;
+  color: #ffffff;
+}
+
+.btn-orange:active {
+  background-color: #012e84;
+  border: #012e84;
+  color: #ffffff;
+}
+
+.btn-orange:focus {
   background-color: #012e84;
   border: #012e84;
   color: #ffffff;
@@ -231,6 +277,7 @@ header .search input {
 .school-details {
   margin: 10px;
   padding: 10px;
+  border: none;
 }
 
 .school-details label {

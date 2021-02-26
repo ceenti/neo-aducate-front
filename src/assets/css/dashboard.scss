@@ -134,25 +134,44 @@ header {
 .school-form {
   padding: 10px;
   margin: 10px;
+  .title-section{
+    text-align: center;
+  }
 
   label {
     display: block;
     font-weight: bold;
+    font-size: 14px;
   }
 
-  input[type="text"] {
-    display:inline-block;
-    background-color: #ffffff;
-    border: 1px solid #f1f6fa;
-    border-radius: 5px;
-    padding: 4px;
-    margin-bottom: 10px;
-  }
   .btn-pink{
     background-color: $pink;
     border: $pink;
-    width: 50%;
     color:#ffffff;
+    margin: 5px;
+    &:hover{
+        background-color: $navy;
+        border: $navy;
+        color:#ffffff;
+    }
+    &:active{
+         background-color: $navy;
+         border: $navy;   
+         color:#ffffff;         
+    }
+    &:focus{
+        background-color: $navy;
+        border: $navy;  
+        color:#ffffff;          
+    }
+  
+  }
+
+  .btn-aqua{
+    background-color: $aqua;
+    border: $aqua;
+    color:#ffffff;
+    margin: 5px;
     &:hover{
         background-color: $navy;
         border: $navy;
@@ -189,7 +208,7 @@ header {
 .school-details {
   margin: 10px;
   padding: 10px;
-
+  border:none;
   label {
     display: block;
   }
@@ -207,6 +226,66 @@ header {
     border: $sky;
     width: 50%;
     color:#ffffff;
+    &:hover{
+        background-color: $navy;
+        border: $navy;
+        color:#ffffff;
+    }
+    &:active{
+         background-color: $navy;
+         border: $navy;   
+         color:#ffffff;         
+    }
+    &:focus{
+        background-color: $navy;
+        border: $navy;  
+        color:#ffffff;          
+    }
+  
+  }
+}
+
+.member-detail {
+  padding: 10px;
+  margin: 10px;
+  .title-section{
+    text-align: center;
+  }
+
+  label {
+    display: block;
+    font-weight: bold;
+    font-size: 14px;
+  }
+
+  .btn-pink{
+    background-color: $pink;
+    border: $pink;
+    color:#ffffff;
+    margin: 5px;
+    &:hover{
+        background-color: $navy;
+        border: $navy;
+        color:#ffffff;
+    }
+    &:active{
+         background-color: $navy;
+         border: $navy;   
+         color:#ffffff;         
+    }
+    &:focus{
+        background-color: $navy;
+        border: $navy;  
+        color:#ffffff;          
+    }
+  
+  }
+
+  .btn-aqua{
+    background-color: $aqua;
+    border: $aqua;
+    color:#ffffff;
+    margin: 5px;
     &:hover{
         background-color: $navy;
         border: $navy;
@@ -258,5 +337,29 @@ a.card-home{
   h2 {
     color: $gray;
     font-size: 18px;
+  }
+}
+.detailedMembership{
+  .btn-orange{
+    background-color: $neo-orange;
+    border: $neo-orange;
+    color:#ffffff;
+    margin: 5px;
+    &:hover{
+        background-color: $navy;
+        border: $navy;
+        color:#ffffff;
+    }
+    &:active{
+         background-color: $neo-orange;
+         border: $neo-orange;   
+         color:#ffffff;         
+    }
+    &:focus{
+        background-color: $navy;
+        border: $navy;  
+        color:#ffffff;          
+    }
+  
   }
 }
