@@ -69,6 +69,46 @@ body {
   color: #ffffff;
 }
 
+.sidebar ul.mobile-menu li {
+  margin: 6px;
+  padding: 4px;
+}
+
+.sidebar ul.mobile-menu li a {
+  padding: 4px;
+  font-size: 14px;
+  line-height: 16px;
+}
+
+.sidebar ul.mobile-menu li svg {
+  height: 20px;
+  width: 20px;
+}
+
+.sidebar .btn-pink {
+  background-color: #ffffff;
+  border: 1px solid #626262;
+  color: #ffffff;
+}
+
+.sidebar .btn-pink:hover {
+  background-color: #ff9e32;
+  border: 1px solid #ff9e32;
+  color: #ffffff;
+}
+
+.sidebar .btn-pink:active {
+  background-color: #ff9e32;
+  border: 1px solid #ff9e32;
+  color: #ffffff;
+}
+
+.sidebar .btn-pink:focus {
+  background-color: #ff9e32;
+  border: 1px solid #ff9e32;
+  color: #ffffff;
+}
+
 header {
   border-top-right-radius: 10px;
   background: #ffffff;
@@ -218,5 +258,10 @@ a.card-home .card img {
 .table a svg {
   width: 25px;
   height: 25px;
+}
+
+.statistics-dashboard h2 {
+  color: #555555;
+  font-size: 18px;
 }
 /*# sourceMappingURL=dashboard.css.map */
