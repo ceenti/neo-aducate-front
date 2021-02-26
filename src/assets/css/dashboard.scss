@@ -339,6 +339,7 @@ a.card-home{
     font-size: 18px;
   }
 }
+
 .detailedMembership{
   .btn-orange{
     background-color: $neo-orange;
@@ -363,3 +364,18 @@ a.card-home{
   
   }
 }
+
+.students-dashboard {
+  margin: 10px;
+  padding: 10px;
+
+  .title {
+    color:$logo-color;
+    font-weight: 800;
+    padding:0;
+  }
+  .section-name {
+    color:$neo-orange;
+  }
+}
+

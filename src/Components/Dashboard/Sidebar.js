@@ -6,6 +6,7 @@ import { ReactComponent as SchoolIcon } from "../../icons/school.svg"
 import { ReactComponent as MultimediaIcon } from "../../icons/multimedia.svg"
 import { ReactComponent as BadgeIcon } from "../../icons/badge.svg"
 import { ReactComponent as MenuIcon } from "../../icons/menu.svg"
+import { ReactComponent as UserIcon } from "../../icons/user.svg"
 import logo from './../../assets/images/logo-neo.svg'
 
 function Sidebar() {
@@ -30,7 +31,7 @@ function Sidebar() {
             <Link to="/dashboard/statistics"><SchoolIcon/> Estadísticas</Link>
           </li>
           <li>
-            <Link to="/dashboard/students"><MultimediaIcon /> Estudiantes</Link>
+            <Link to="/dashboard/students"><UserIcon /> Estudiantes</Link>
           </li>
           <li>
             <Link to="/dashboard/memberships"><BadgeIcon /> Membresías</Link>
@@ -54,7 +55,7 @@ function Sidebar() {
               <Link to="/dashboard/statistics"><SchoolIcon/> Estadísticas</Link>
             </li>
             <li>
-              <Link to="/dashboard/students"><MultimediaIcon /> Estudiantes</Link>
+              <Link to="/dashboard/students"><UserIcon/> Estudiantes</Link>
             </li>
             <li>
               <Link to="/dashboard/memberships"><BadgeIcon /> Membresías</Link>
