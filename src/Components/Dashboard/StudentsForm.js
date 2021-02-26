@@ -1,5 +1,6 @@
-import React, {useState, useEffect} from "react";
+import React, {useState, useEffect } from "react";
 import { Button, Form, FormGroup, Label, Input, FormText } from 'reactstrap';
+import { Link } from "react-router-dom";
 import { getSchools, createStudent } from './../../lib/api';
 
 function StudentsForm() {
@@ -53,8 +54,10 @@ function StudentsForm() {
           { schoolsCollection.map( school => <option value={school._id}>{school.school_name}</option> )}
         </Input>
       </FormGroup>
-     
-      <Button className="btn-pink" onClick={clickHandler}>Submit</Button>
+      <div className="text-right">
+        <Link className="btn btn-aqua" to="/dashboard/students">Cancelar </Link>
+        <Button className="btn-pink" onClick={clickHandler}>Guardar</Button>
+      </div>
       </Form>  
     </div>
   )

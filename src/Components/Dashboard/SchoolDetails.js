@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { getSchoolById } from './../../lib/api';
+import { Link } from 'react-router-dom';
 import MembershipDetails from './MembershipDetails';
 import { Button, Form, FormGroup, Label, Input, FormText } from 'reactstrap';
 
@@ -20,26 +21,29 @@ function SchoolDetails(props) {
 
     <div className=" member-detail row">
       <div className="">
-          <div class="card-deck">
-            <div class="card">
-              <div class="card-body" data-id={_id}>
-                <h5 class="card-title">{school_name}</h5>
-                <label>Dirección: </label>
-                <p class="card-text">{address}</p>
-                <label>Teléfonos: </label>
-                <p class="card-text"><strong class="text-muted">{phone}</strong></p>
-              </div>
-              <div className="d-flex justify-content-start m-1">
-                <Button className="btn btn-pink btn-sm" onClick={displayMembership}>Desplegar Membresía</Button>
-              </div>
+        <div class="card-deck">
+          <div class="card">
+            
+            <div class="card-body" data-id={_id}>
+              <h5 class="card-title">{school_name}</h5>
+              <label>Dirección: </label>
+              <p class="card-text">{address}</p>
+              <label>Teléfonos: </label>
+              <p class="card-text"><strong class="text-muted">{phone}</strong></p>
             </div>
-            <div className="detailedMembership">
-              {memDetail ? <div className=""><MembershipDetails id={tier._id}/></div> : null}
-          </div>
+            
+            <div className="d-flex justify-content-start m-1">
+              <Button className="btn btn-pink btn-sm" onClick={displayMembership}>Desplegar Membresía</Button>
+            </div>
           </div>
 
-      </div>    
-
+          <div className="detailedMembership">
+            {memDetail ? <div className=""><MembershipDetails id={tier._id}/></div> : null}
+          </div>
+        </div>
+        
+        <Link className="btn btn-aqua" to="/dashboard/schools">Regresar</Link>
+      </div>
     </div>
 
   )

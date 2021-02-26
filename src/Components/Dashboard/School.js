@@ -20,9 +20,9 @@ function School(props) {
         <Link to={`/dashboard/schools/edit/${_id}`} >
           <PencilIcon />
         </Link>
-        <Link>
+        {/*<Link>
           <DeleteIcon />
-        </Link>
+        </Link>*/}
       </td>
     </tr>
   )
