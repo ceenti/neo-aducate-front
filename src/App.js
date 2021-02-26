@@ -7,10 +7,13 @@ export default function App(){
  return(
 
      <div className="container-fluid mt-3">
+         <div className="container">
          {
               token ? <DashboardNav/>  : <Login />
               
          }
+         </div>
+
 
      </div>
 
