@@ -23,9 +23,9 @@ function Membership(props) {
         <Link to={`/dashboard/memberships/edit/${_id}`} >
           <PencilIcon />
         </Link>
-        <Link>
+        {/* <Link>
           <DeleteIcon />
-        </Link>
+        </Link> */}
       </td>
     </tr>
   )
