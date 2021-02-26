@@ -16,6 +16,7 @@ import StudentsDashboard from "./StudentsDashboard";
 import SchoolDetails from "./SchoolDetails";
 import MembershipDetails from "./MembershipDetails";
 import SchoolForm from "./SchoolForm";
+import StudentsForm from "./StudentsForm";
 import SchoolEdit from "./SchoolEdit";
 import MembershipEdit from "./MembershipEdit";
 import Stadistics from './Statistics';
@@ -107,6 +108,12 @@ function DashboardNav() {
                 exact
                 path="/dashboard/students">
                 <StudentsDashboard/>
+              </Route>
+
+              <Route
+                exact
+                path="/dashboard/students/new">
+                <StudentsForm/>
               </Route>
 
 

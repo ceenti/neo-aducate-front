@@ -155,6 +155,27 @@ async function getStudentsBySchool(id, callback) {
     .catch( error => console.log(error))
 }
 
+async function createStudent(student) {
+    console.log(student)
+    await fetch(`http://localhost:8080/admins/students`, {
+        headers: {
+            'Content-Type': 'application/json',
+            'Authorization': localStorage.getItem('Token')
+        },
+        method: 'POST',
+        body: JSON.stringify(student)
+    })
+    .then( response => {
+        if(!response.ok){
+            return response.json()
+            .then(error => {throw new Error (error.message)})
+        }
+        return response.json()
+    })
+    .then( json => json.data)
+    .catch( error => console.log(error))
+}
+
 export {
     createSchool,
     getSchools,
@@ -163,5 +184,6 @@ export {
     getAllMemberships,
     updateMembership,
     updateSchool,
-    getStudentsBySchool
+    getStudentsBySchool,
+    createStudent
 }
