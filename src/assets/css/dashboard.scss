@@ -68,6 +68,46 @@ body {
       }
     }
   }
+
+  ul.mobile-menu {
+    li {
+      margin: 6px;
+      padding: 4px;
+
+      a {
+        padding: 4px;
+        font-size: 14px;
+        line-height: 16px;
+      }
+
+      svg {
+        height: 20px;
+        width: 20px;
+      }
+    }
+  }
+
+  .btn-pink{
+    background-color: #ffffff;
+    border: 1px solid #626262;
+    color:#ffffff;
+    &:hover{
+        background-color: $neo-orange;
+        border: 1px solid $neo-orange;
+        color:#ffffff;
+    }
+    &:active{
+         background-color: $neo-orange;
+         border: 1px solid $neo-orange;
+         color:#ffffff;
+    }
+    &:focus{
+        background-color: $neo-orange;
+        border: 1px solid $neo-orange;
+        color:#ffffff;
+    }
+  
+  }
 }
 
 header {
@@ -211,5 +251,12 @@ a.card-home{
   a svg{
     width: 25px;
     height: 25px;
+  }
+}
+
+.statistics-dashboard {
+  h2 {
+    color: $gray;
+    font-size: 18px;
   }
 }

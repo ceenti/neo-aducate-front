@@ -60,10 +60,10 @@ const schoolsData = [
 
 function Statistics(){
   return (
-    <Row>
+    <Row className="statistics-dashboard">
       <Col xs={12} sm={6}>
-        <div className="card rounded m-2 p-2">
-          <h3>Registros de nuevos alumnos</h3>
+        <div className="card rounded m-2 mb-4 p-2">
+          <h2 className="m-2 mb-4">Registros de nuevos alumnos</h2>
           <ResponsiveContainer width="100%" height={300}>
             <LineChart data={studentsData} margin={{ top: 5, right: 30, left: 20, bottom: 5 }}>
               <CartesianGrid strokeDasharray="5 5" />
@@ -80,7 +80,7 @@ function Statistics(){
 
       <Col xs={12} sm={6}>
         <div className="card rounded m-2 p-2">
-          <h3>Registros de nuevas escuelas</h3>
+          <h2 className="m-2 mb-4">Registros de nuevas escuelas</h2>
           <ResponsiveContainer width="100%" height={300}>
             <LineChart data={schoolsData} margin={{ top: 5, right: 30, left: 20, bottom: 5 }}>
               <CartesianGrid strokeDasharray="5 5" />
