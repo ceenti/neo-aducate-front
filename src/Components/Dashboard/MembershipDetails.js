@@ -14,8 +14,7 @@ function MembershipDetails(props) {
   const { _id, max_amount, min_amount, price, duration, title_tier} = membership;  
 
   return (
-    <div className="col-6">
-      
+    <div>
       <div class="card tier-detail">
         <div class="card-body">
         <h6>Detalle de Membresía</h6>

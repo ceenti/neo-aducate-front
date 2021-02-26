@@ -53,7 +53,7 @@ function DashboardNav() {
             <Sidebar className="sidebar-styles" />
           </Col>
 
-          <Col md={9} className="d-flex align-items-center container-styles">
+          <Col md={9} className="">
             {/* <Header /> */}
             <Switch>
               <Route
