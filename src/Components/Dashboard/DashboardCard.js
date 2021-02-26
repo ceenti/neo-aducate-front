@@ -11,9 +11,9 @@ import Membership from './../../assets/images/Plain-rafiki.svg'
 export default function DashboardCard(){
   return (
 
-    <div className="row">
-        <Link to = "/dashboard/statistics" className="card-home col-6 col-md-4 mb-1 rounded">
-            <Card >
+    <div className="row d-flex justify-content-center">
+        <Link to = "/dashboard/statistics" className="card-home col-6 col-md-5 mb-1 rounded">
+            <Card className="card-item">
                 <CardImg className="" src={Stadistics} alt="Card image cap" />
                 <CardBody className= " text-center nowrap">
                 <CardSubtitle tag="h6" className="mb-2 text-muted">Estadísticas</CardSubtitle>
@@ -21,8 +21,8 @@ export default function DashboardCard(){
             </Card>
         </Link>
 
-        <Link to = "/dashboard/memberships" className="card-home col-6 col-md-4 mb-1 rounded">
-            <Card >
+        <Link to = "/dashboard/memberships" className="card-home col-6 col-md-5 mb-1 rounded">
+            <Card className="card-item">
                 <CardImg className="w-55" src={Membership} alt="Card image cap" />
                 <CardBody className= " text-center nowrap">
                 <CardSubtitle tag="h6" className="mb-2 text-muted">Membresía</CardSubtitle>
@@ -30,8 +30,8 @@ export default function DashboardCard(){
             </Card>
         </Link>
 
-        <Link to = "/dashboard/schools" className="card-home col-6 col-md-4 mb-1 rounded">
-            <Card >
+        <Link to = "/dashboard/schools" className="card-home col-6 col-md-5 mb-1 rounded">
+            <Card className="card-item">
                 <CardImg className="w-55" src={SchoolImage} alt="Card image cap" />
                 <CardBody className= " text-center ">
                 <CardSubtitle tag="h6" className="mb-2 text-muted">Lista de escuelas</CardSubtitle>
@@ -39,8 +39,8 @@ export default function DashboardCard(){
             </Card>
         </Link>
 
-        <Link to = "/dashboard/schools" className="card-home col-6 col-md-4 mb-1 rounded">
-            <Card >
+        <Link to = "/dashboard/students" className="card-home col-6 col-md-5 mb-1 rounded">
+            <Card className="card-item">
                 <CardImg className="w-55" src={studentsImage} alt="Card image cap" />
                 <CardBody className= " text-center nowrap">
                 <CardSubtitle tag="h6" className="mb-2 text-muted">Lista alumnos</CardSubtitle>
@@ -48,14 +48,14 @@ export default function DashboardCard(){
             </Card>
         </Link>
 
-        <Link to = "/dashboard/schools" className="card-home col-6 col-md-4 mb-1 rounded">
-            <Card >
+        {/* <Link to = "/dashboard/schools" className="card-home col-6 col-md-5 mb-1 rounded">
+            <Card className="card-item">
                 <CardImg className="w-55" src={Content} alt="Card image cap" />
                 <CardBody className= " text-center nowrap">
                 <CardSubtitle tag="h6" className="mb-2 text-muted">Contenido</CardSubtitle>
                 </CardBody>
             </Card>
-        </Link>
+        </Link> */}
 
     </div>
   );

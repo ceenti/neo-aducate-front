@@ -4,7 +4,7 @@ import DashboardCard from './DashboardCard'
 
 function Dashboard() {
   return (
-    <div className="school-dashboard text-center container-fluid">
+    <div className="school-dashboard text-center container">
       <h3 className="title">Bienvenido al <strong className="section-name">Dashboard</strong></h3>
       <DashboardCard/>
     </div>

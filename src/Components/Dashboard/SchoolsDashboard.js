@@ -39,7 +39,7 @@ function SchoolsDashboard() {
           </Table>
         </div>
       </div>
-      <PaginationContainer/>
+      {/* <PaginationContainer/> */}
     </>
   )
 }

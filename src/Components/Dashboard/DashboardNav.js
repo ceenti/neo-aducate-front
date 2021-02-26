@@ -45,15 +45,15 @@ function EditMembership() {
 function DashboardNav() {
 
   return (
-    <Container className="admin-dashboard">
+    <Container className="admin-dashboard p-2">
       <Router>
         <Row>
-          <Col md={3} className="p-0">
-            <Sidebar />
+          <Col md={3} >
+            <Sidebar className="sidebar-styles" />
           </Col>
 
-          <Col md={9} className="p-0">
-            <Header />
+          <Col md={9} className="d-flex align-items-center container-styles">
+            {/* <Header /> */}
             <Switch>
               <Route
                 exact 

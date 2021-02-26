@@ -14,9 +14,11 @@ function MembershipDetails(props) {
   const { _id, max_amount, min_amount, price, duration, title_tier} = membership;  
 
   return (
-  
-      <div class="card">
+    <div className="col-6">
+      
+      <div class="card tier-detail">
         <div class="card-body">
+        <h6>Detalle de Membresía</h6>
           <h5 class="card-title">{title_tier}</h5>
           <Label for="price">Precio:</Label>
           <p class="card-text">${price}</p>
@@ -26,7 +28,7 @@ function MembershipDetails(props) {
           <p class="card-text">{duration} meses</p>
         </div>
       </div>
-
+    </div>
   )
 }
 

@@ -9,10 +9,21 @@ body {
   margin: 0;
 }
 
+.container-styles {
+  border-radius: 4px;
+}
+
+.container-styles .card-item {
+  margin: 6px 0;
+}
+
 .sidebar {
   border-radius: 4px 0px 0px 4px;
   background: #ffffff;
   height: 100%;
+  border-radius: 4px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 3px;
+          box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 3px;
 }
 
 .sidebar ul {
@@ -347,9 +358,23 @@ a.card-home .card img {
   height: 25px;
 }
 
-.statistics-dashboard h2 {
-  color: #555555;
-  font-size: 18px;
+.statistics-dashboard {
+  margin: 10px;
+  padding: 10px;
+}
+
+.statistics-dashboard .title {
+  color: #4FA9DD;
+  font-weight: 800;
+  padding: 0;
+}
+
+.statistics-dashboard .section-name {
+  color: #ff9e32;
+}
+
+.statistics-dashboard h6 {
+  text-align: center;
 }
 
 .detailedMembership .btn-orange {
@@ -375,5 +400,20 @@ a.card-home .card img {
   background-color: #012e84;
   border: #012e84;
   color: #ffffff;
+}
+
+.students-dashboard {
+  margin: 10px;
+  padding: 10px;
+}
+
+.students-dashboard .title {
+  color: #4FA9DD;
+  font-weight: 800;
+  padding: 0;
+}
+
+.students-dashboard .section-name {
+  color: #ff9e32;
 }
 /*# sourceMappingURL=dashboard.css.map */
