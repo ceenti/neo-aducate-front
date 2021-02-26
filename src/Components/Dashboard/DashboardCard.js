@@ -11,8 +11,8 @@ import Membership from './../../assets/images/Plain-rafiki.svg'
 export default function DashboardCard(){
   return (
 
-    <div className="row justify-content-between">
-        <Link to = "/dashboard/statistics" className="card-home col-12 col-sm-4 col-md-3  mb-1 rounded">
+    <div className="row">
+        <Link to = "/dashboard/statistics" className="card-home col-6 col-md-4 mb-1 rounded">
             <Card >
                 <CardImg className="" src={Stadistics} alt="Card image cap" />
                 <CardBody className= " text-center nowrap">
@@ -21,7 +21,7 @@ export default function DashboardCard(){
             </Card>
         </Link>
 
-        <Link to = "/dashboard/memberships" className="card-home col-12 col-sm-4 col-md-3  mb-1 rounded">
+        <Link to = "/dashboard/memberships" className="card-home col-6 col-md-4 mb-1 rounded">
             <Card >
                 <CardImg className="w-55" src={Membership} alt="Card image cap" />
                 <CardBody className= " text-center nowrap">
@@ -30,7 +30,7 @@ export default function DashboardCard(){
             </Card>
         </Link>
 
-        <Link to = "/dashboard/schools" className="card-home col-12 col-sm-4 col-md-3  mb-1 rounded">
+        <Link to = "/dashboard/schools" className="card-home col-6 col-md-4 mb-1 rounded">
             <Card >
                 <CardImg className="w-55" src={SchoolImage} alt="Card image cap" />
                 <CardBody className= " text-center ">
@@ -39,7 +39,7 @@ export default function DashboardCard(){
             </Card>
         </Link>
 
-        <Link to = "/dashboard/schools" className="card-home col-12 col-sm-4 col-md-3  mb-1 rounded">
+        <Link to = "/dashboard/schools" className="card-home col-6 col-md-4 mb-1 rounded">
             <Card >
                 <CardImg className="w-55" src={studentsImage} alt="Card image cap" />
                 <CardBody className= " text-center nowrap">
@@ -48,7 +48,7 @@ export default function DashboardCard(){
             </Card>
         </Link>
 
-        <Link to = "/dashboard/schools" className="card-home col-12 col-sm-4 col-md-3  mb-1 rounded">
+        <Link to = "/dashboard/schools" className="card-home col-6 col-md-4 mb-1 rounded">
             <Card >
                 <CardImg className="w-55" src={Content} alt="Card image cap" />
                 <CardBody className= " text-center nowrap">
