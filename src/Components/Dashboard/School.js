@@ -7,6 +7,7 @@ import { ReactComponent as PencilIcon } from "../../icons/pencil.svg";
 function School(props) {
   const { _id, school_name, address } = props.school;
   const { pos } = props
+
   return (
     <tr>
       <td><Link to={`/dashboard/schools/${_id}`}>{pos}</Link></td>

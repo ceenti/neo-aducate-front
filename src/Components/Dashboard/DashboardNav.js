@@ -10,8 +10,9 @@ import { Container, Row, Col } from "reactstrap";
 import Sidebar from "./Sidebar";
 import Dashboard from "./Dashboard";
 import Header from "./Header";
-import SchoolsDashboard from "./SchoolsDashboard";
 import MembershipsDashboard from "./MembershipsDashboard";
+import SchoolsDashboard from "./SchoolsDashboard";
+import StudentsDashboard from "./StudentsDashboard";
 import SchoolDetails from "./SchoolDetails";
 import MembershipDetails from "./MembershipDetails";
 import SchoolForm from "./SchoolForm";
@@ -101,6 +102,13 @@ function DashboardNav() {
                 path="/dashboard/memberships"
                 component={MembershipsDashboard}
               />
+
+              <Route
+                exact
+                path="/dashboard/students">
+                <StudentsDashboard/>
+              </Route>
+
 
               <Route
                 exact
