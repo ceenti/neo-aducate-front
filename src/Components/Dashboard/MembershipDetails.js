@@ -1,5 +1,6 @@
 import React, {useEffect, useState} from "react";
 import {getMembershipById} from './../../lib/api';
+import { Button, Form, FormGroup, Label, Input, FormText } from 'reactstrap';
 
 function MembershipDetails(props) {
   const [membership, setMembership] = useState({});
@@ -13,27 +14,19 @@ function MembershipDetails(props) {
   const { _id, max_amount, min_amount, price, duration, title_tier} = membership;  
 
   return (
-    <div className="school-details">
-      <div>
-        <label for="name">Nombre:</label>
-        <p className="col-6">{title_tier}</p>
+  
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">{title_tier}</h5>
+          <Label for="price">Precio:</Label>
+          <p class="card-text">${price}</p>
+          <Label for="price">Rango de alumnos:</Label>
+          <p class="card-text">{`${min_amount} - ${max_amount}`}</p>
+          <Label for="membership">Duración: </Label>
+          <p class="card-text">{duration} meses</p>
+        </div>
       </div>
 
-      <div>
-        <label for="address">Costo por alumno:</label>
-        <p className="col-6">${price}</p>
-      </div>
-
-      <div>
-        <label for="phone">Número de alumnos:</label>
-        <p className="col-6"><strong>{min_amount}</strong> - <strong>{max_amount}</strong></p>
-      </div>
-
-      <div>
-        <label for="membership">Periodicidad:</label>
-        <p className="col-6">{duration} meses</p>
-      </div>
-    </div>
   )
 }
 
